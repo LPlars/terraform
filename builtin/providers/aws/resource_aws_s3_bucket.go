@@ -44,9 +44,10 @@ func resourceAwsS3Bucket() *schema.Resource {
 			},
 
 			"policy": &schema.Schema{
-				Type:      schema.TypeString,
-				Optional:  true,
-				StateFunc: normalizeJson,
+				Type:     schema.TypeString,
+				Optional: true,
+				Computed: true,
+				//StateFunc: normalizeJson,
 			},
 
 			"cors_rule": &schema.Schema{
